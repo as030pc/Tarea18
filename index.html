@@ -1,20 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Planetas!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./style/styles.css">
-    
 </head>
+
 <body>
-    <h1> Preguntas </h1>
-    <h1> Ilan </h1>
-    
-    
 
+    <h1>Planetas</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th># de planeta</th>
+                <th>Planeta</th>
+                <th>Distancia (año luz)</th>
+                <th>Tamaño</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="number" id="n_planeta_1" class="numeracion_planetas planeta1"></td>
+                <td><input type="text" id="np_planeta_1" class="nombre_planetas planeta1"></td>
+                <td><input type="number" id="d_planeta_1" class="distancia_planetas planeta1"></td>
+                <td><input type="number" id="t_planeta_1" class="Tamanio_planetas planeta1"></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="n_planeta_2" class="numeracion_planetas planeta2"></td>
+                <td><input type="text" id="np_planeta_2" class="nombre_planetas planeta2"></td>
+                <td><input type="number" id="d_planeta_2" class="distancia_planetas planeta2"></td>
+                <td><input type="number" id="t_planeta_2" class="Tamanio_planetas planeta2"></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="n_planeta_3" class="numeracion_planetas planeta3"></td>
+                <td><input type="text" id="np_planeta_3" class="nombre_planetas planeta3"></td>
+                <td><input type="number" id="d_planeta_3" class="distancia_planetas planeta3"></td>
+                <td><input type="number" id="t_planeta_3" class="Tamanio_planetas planeta3"></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="n_planeta_4" class="numeracion_planetas"></td>
+                <td><input type="text" id="np_planeta_4" class="nombre_planetas"></td>
+                <td><input type="number" id="d_planeta_4" class="distancia_planetas"></td>
+                <td><input type="number" id="t_planeta_4" class="Tamanio_planetas planeta4"></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="n_planeta_5" class="numeracion_planetas"></td>
+                <td><input type="text" id="np_planeta_5" class="nombre_planetas"></td>
+                <td><input type="number" id="d_planeta_5" class="distancia_planetas"></td>
+                <td><input type="number" id="t_planeta_5" class="Tamanio_planetas planeta5"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="buttons">
+        <button class="button is-success">Enviar</button>
+        <button class="button is-info">Ordenar Valores</button>
+        <button class="button is-info">Filtrar</button>
+        <button class="button is-info">Buscar</button>
+    </div>
 
-    <script src="./scripts/main.js" type = "module"></script>
 </body>
+
 </html>
