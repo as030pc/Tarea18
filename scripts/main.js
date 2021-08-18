@@ -1,12 +1,11 @@
 import Planeta from "./modulo/Planeta.js";
-
-var arregloValores;
+let arregloValores;
 let arregloDistancia;
 let arregloNombrePlanetas = [];
 let arregloPlanetas = [];
 let arregloTamanio = [];
 
-var enviarEvaluacion = (e) => {
+let enviarEvaluacion = (e) => {
 
     let inputs = [...document.querySelectorAll(".numeracion_planetas")];
     let inputsD = [...document.querySelectorAll(".distancia_planetas")];
@@ -38,7 +37,6 @@ var enviarEvaluacion = (e) => {
         planeta.nombre = document.getElementById(`np_planeta_${x}`).value;
         planeta.numero_clasificacion = document.getElementById(`n_planeta_${x}`).value;
         planeta.tamanio = document.getElementById(`t_planeta_${x}`).value;
-
         arregloPlanetas.push(planeta);
         console.log(x)
     }
@@ -48,28 +46,27 @@ var enviarEvaluacion = (e) => {
 }
 
 let ordernarValores = (e) => {
-    /**
-     * Generamos copia del arreglo en ambos casos.
-     */
-    let copiArregloValores = arregloValores.map(numero => numero);
-    let copiaArregloPlanetas = arregloPlanetas.map(planeta => planeta);
+    let copiArregloValores = arregloValores;
+    let copiaArregloPlanetas = arregloPlanetas;
 
-    /**
-     * Procedemos a ordenar el arreglo,  en el segundo caso,  emplearemos una propiedad de la 
-     * clase planeta,  como elemento de comparacion en la funcion de ordenamiento
-     */
     copiArregloValores.sort((a, b) => {
         return a - b;
     });
-
     copiaArregloPlanetas.sort((a, b) => {
         return a.numero_clasificacion - b.numero_clasificacion;
     });
-
-    let copia2ArregloPlanetas = copiaArregloPlanetas.map(planeta => planeta);
+    let copia2ArregloPlanetas = copiaArregloPlanetas;
 
     console.log("********Arreglos ascendente***********")
-    console.log(copiArregloValores);
+    copiArregloValores.map(e => {
+        console.log(e);
+    })
+    copiaArregloPlanetas.map((e) =>{
+        console.log(e);
+
+    })
+
+    //console.log(copiArregloValores);
     console.log(copiaArregloPlanetas);
 
     console.log("********Arreglos descendente***********")
@@ -82,15 +79,16 @@ let ordernarValores = (e) => {
 
 let filtrarDistancia = (e) => {
     let distanciaABuscar = prompt("Digite la distacia a filtrar");
-
+    
     let arregloFiltradoDistancia = arregloDistancia.filter(
         (distancia) => distancia >= distanciaABuscar
     );
+    
 
     if (arregloFiltradoDistancia == undefined)
         alert("No existe el planeta");
     else
-        alert("Informacion del filtro",arregloFiltradoDistancia);
+        alert("Informacion del filtro");
         console.log(arregloFiltradoDistancia)
 
 }
