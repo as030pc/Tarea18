@@ -6,12 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
     
 </head>
 <body>
-    <h1> Preguntas </h1>
+    <h1> Planetas </h1>
+    <table class="pure-table pure-table-horizontal">
+        <thead>
+            <tr>
+                <th>Id Planeta</th>
+                <th>Planeta </th>
+                <th> Distancia </th>
+                <th> Tamaño </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input class = "IDplaneta" id = "ID_planeta1" type="number"></td>
+                <td><input  class =  "nombrePlaneta" id = "N_planeta1"  type="text"></td>
+                <td><input  class = "distanciaPlaneta"id = "D_planeta1"  type="number"></td>
+                <td><input  class = "tamañoPlaneta" id = "T_planeta1"  type="number"></td>
+            </tr>
+            <tr>
+                <td><input class = "IDplaneta" id = "ID_planeta2" type="number"></td>
+                <td><input  class =  "nombrePlaneta" id = "N_planeta2"  type="text"></td>
+                <td><input  class = "distanciaPlaneta"id = "D_planeta2"  type="number"></td>
+                <td><input  class = "tamañoPlaneta" id = "T_planeta2"  type="number"></td>
+            </tr>
+            <tr>
+                <td><input class = "IDplaneta" id = "ID_planet3" type="number"></td>
+                <td><input  class =  "nombrePlaneta" id = "N_planeta3"  type="text"></td>
+                <td><input  class = "distanciaPlaneta"id = "D_planeta3"  type="number"></td>
+                <td><input  class = "tamañoPlaneta" id = "T_planeta3"  type="number"></td>
+            </tr>
+        </tbody>
+    </table>
     
+    <div>
+        <style scoped="">
+            .button-success,
+            .button-error,
+            .button-warning,
+            .button-secondary {
+                color: white;
+                border-radius: 4px;
+                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            }
+    
+            .button-success {
+                background: rgb(28, 184, 65);
+                /* this is a green */
+            }
+    
+            .button-error {
+                background: rgb(202, 60, 60);
+                /* this is a maroon */
+            }
+    
+            .button-warning {
+                background: rgb(223, 117, 20);
+                /* this is an orange */
+            }
+    
+            .button-secondary {
+                background: rgb(66, 184, 221);
+                /* this is a light blue */
+            }
+        </style>
+        <button id = "btn_enviar_evaluacion" class="button-success pure-button"> Enviar </button>
+        <button class="button-error pure-button"> Ordenar Valores </button>
+        <button class="button-warning pure-button"> Filtrar </button>
+        <button class="button-secondary pure-button"> Buscar </button>
+    </div>
     
 
 
