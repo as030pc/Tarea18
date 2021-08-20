@@ -12,6 +12,13 @@ let enviarEvaluacion = (e) => {
     let inputsN = [...document.querySelectorAll(".nombre_planetas")];
     let inputsT = [...document.querySelectorAll(".Tamanio_planetas")];
 
+
+//     function agregarValues (vector) {
+//         for (let i = 0; i<inputs.length; i++) {
+//             vectorValues = parseInt(vector[i].value);
+//             return vectorValues;
+//     }
+// }
     arregloValores = inputs.map((input) => {
         return parseInt(input.value);
     });
